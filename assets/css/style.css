@@ -14,10 +14,6 @@ html, body {
 
 /*INDEX*/
 
-.logo {
-	width: 40%;
-}
-
 h1 {
 	font-family: Impact, Charcoal, sans-serif;
 	font-size: 2.5em;
@@ -43,6 +39,10 @@ h1 {
 	color: pink !important;
 }
 
+.w40 {
+	width: 40% !important;
+}
+
 .w100 {
 	width: 100% !important;
 }
@@ -53,6 +53,10 @@ h1 {
 
 .vh50 {
 	height: 50vh !important;
+}
+
+.vh20 {
+	height: 20vh !important;
 }
 
 .pad10 {
@@ -73,4 +77,8 @@ footer {
 header .button-collapse {
 	position: absolute;
 	left: 10px;
+}
+
+#cards li {
+	margin-bottom: 10px;
 }
