@@ -25,6 +25,24 @@
 		<p>TRANS-LAB</p>
 	</header>
 
+	<div class="container vh50">
+		<div class="section center-align w100 pad20">
+			<div class="input-field">
+				<input pattern="[0-9]{8}" id="card_number_txt" type="text" class="validate">
+				<label for="card_number_txt">Numero tarjeta</label>
+			</div>
+			<div class="input-field">
+				<select id="opciones">
+					<option value="" selected>Selecciona una tarjeta</option>
+    			</select>
+				<label>Tarjetas guardadas</label>
+			</div>
+			<a id="verSaldo" onclick="verSaldo()" class="waves-effect waves-light btn amber accent-4 white-text z-depth-0">VER SALDO</a>
+		</div>
+	</div>
+
+	<div id ="resultado" class="container vh50 center-align pad20"></div>
+
 
 
 
