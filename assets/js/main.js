@@ -1,4 +1,6 @@
-/* Holiii acá va tu código también */
+if (!localStorage.getItem('cards')) {
+    localStorage.setItem('cards', "[]");
+}
 
 function login(){
     var mail = $('#mail');

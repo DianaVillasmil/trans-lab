@@ -1,3 +1,6 @@
+if (!localStorage.getItem('cards')) {
+    localStorage.setItem('cards', "[]");
+}
 var tarifa = 0;
 
 $(document).ready(function () {

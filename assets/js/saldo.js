@@ -1,3 +1,6 @@
+if (!localStorage.getItem('cards')) {
+    localStorage.setItem('cards', "[]");
+}
 $(document).ready(function () {
     var cards = JSON.parse(localStorage.getItem('cards'));
     cards.forEach((card) => {
