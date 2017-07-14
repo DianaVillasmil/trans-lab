@@ -2,35 +2,70 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>TransLab</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>TransLab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="grey lighten-2">
 
-	<ul id="slide-out" class="side-nav">
-		<li><a href="ver-saldo.html"><i class="material-icons amber-text text-accent-4">attach_money</i>Ver saldo</a></li>
-		<li><a href="calcular-tarifa.html"><i class="material-icons amber-text text-accent-4">apps</i>Calcular tarifa</a></li>
-		<li><a href="perfil.html"><i class="material-icons amber-text text-accent-4">person</i>Perfil</a></li>
-		<li><a href="preguntas-frecuentes.html"><i class="material-icons amber-text text-accent-4">receipt</i>Preguntas frecuentes</a></li>
-		<li><a href="home.html"><i class="material-icons amber-text text-accent-4">arrow_forward</i>HOME</a></li>
-	</ul>
-	<header class="pad10 grey darken-4 center-align white-text">
-		<a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-		<p>TRANS-LAB</p>
-	</header>
+    <ul id="slide-out" class="side-nav">
+        <li><a href="ver-saldo.html"><i class="material-icons amber-text text-accent-4">attach_money</i>Ver saldo</a></li>
+        <li><a href="calcular-tarifa.html"><i class="material-icons amber-text text-accent-4">apps</i>Calcular tarifa</a></li>
+        <li><a href="perfil.html"><i class="material-icons amber-text text-accent-4">person</i>Perfil</a></li>
+        <li><a href="preguntas-frecuentes.html"><i class="material-icons amber-text text-accent-4">receipt</i>Preguntas frecuentes</a></li>
+        <li><a href="home.html"><i class="material-icons amber-text text-accent-4">arrow_forward</i>HOME</a></li>
+    </ul>
+    <header class="pad10 grey darken-4 center-align white-text">
+        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+        <p>TRANS-LAB</p>
+    </header>
+
+
+    <div class="container vh50">
+        <div class="section center-align w100 pad20">
+            <div class="input-field">
+                <input pattern="[0-9]{8}" id="card_number_txt" type="text" class="validate">
+                <label for="card_number_txt">Numero tarjeta</label>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 validate">
+                    <select id="tarifas">
+					<option value="" disabled selected>Tarifa</option>
+                    <option value="740">Horario Alto</option>
+                    <option value="680">Horario Medio</option>
+                    <option value="640">Horario Bajo</option>
+    			</select>
+                    <label>Tarifa</label>
+                </div>
+                <div class="input-field col s6">
+                    <select id="tarjetas">
+					<option value="" selected>Tarjeta</option>
+    			</select>
+                    <label>Tarjetas guardadas</label>
+                </div>
+            </div>
+
+            <a id="calcularTarifa" onclick="calcularTarifa()" class="waves-effect waves-light btn amber accent-4 white-text z-depth-0">CALCULAR TARIFA</a>
+        </div>
+    </div>
+
+    <div id="resultado" class="container vh50 center-align pad20">
+        <div id="costo"></div>
+        <br/>
+        <div id="saldo"></div>
+    </div>
 
 
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <script src="assets/js/menu.js"></script>
-	<script src="assets/js/tarifa.js"></script>
+    <script src="assets/js/tarifa.js"></script>
 
 </body>
 

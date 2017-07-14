@@ -3,7 +3,7 @@ $(document).ready(function () {
     cards.forEach((card) => {
         $('#opciones').append(`<option value="${card}">${card}</option>`);
     });
-    $('#opciones').material_select();
+    $('select').material_select();
     $('#opciones').on('change', (event) => {
         $('#card_number_txt').val('');
         if ($('#opciones').val() != '') {
@@ -17,22 +17,25 @@ $(document).ready(function () {
 
 function verSaldo() {
     var bip = $('#card_number_txt').val() + $('#opciones').val();
-    var url = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${bip}`;
+    if (bip != '') {
+        var url = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${bip}`;
 
-    console.log(url);
+        console.log(url);
 
-    var jqxhr = $.getJSON(url)
-        .done(function (result) {
-            console.log(result);
-            mostrarSaldo(result);
-        })
-        .fail(function (error) {
-            console.log("error");
-            console.log(error);
-        })
-        .always(function () {
-            console.log("complete");
-        });
+        var jqxhr = $.getJSON(url)
+            .done(function (result) {
+                console.log(result);
+                mostrarSaldo(result);
+            })
+            .fail(function (error) {
+                console.log("error");
+                console.log(error);
+            })
+            .always(function () {
+                console.log("complete");
+            });
+    }
+
 }
 
 function mostrarSaldo(saldo) {
