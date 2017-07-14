@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>TransLab</title>
@@ -10,34 +11,54 @@
 	<!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>-->
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-	<div class="logo">
-		<img src="assets/docs/imagen.png" alt="">
-		<h1>TRANS-LAB</h1>
+
+<body class="grey darken-3">
+
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div class="valign-wrapper logo-container">
+					<div class="section center-align">
+						<img src="assets/docs/imagen.png" alt="" class="logo">
+						<h1 class="amber-text text-accent-4">TRANS-LAB</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col s12">
+				<div class="white">
+					<div class="input-container pad10">
+						<i class="material-icons grey-text text-lighten-1">person_outline</i>
+						<input placeholder="Correo Electrónico" id="mail" type="email" class="validate browser-default grey-text text-lighten-1">
+					</div>
+					<hr/>
+					<div class="input-container pad10">
+						<i class="material-icons grey-text text-lighten-1">lock_outline</i>
+						<input pattern="[0-9]{8}" placeholder="Contraseña" id="pass" type="text" class="validate browser-default grey-text text-lighten-1">
+					</div>
+				</div>
+			</div>
+			<div class="col s12">
+				<a id="login" onclick="login()" class="waves-effect waves-light btn-large w100 amber accent-4 grey-text text-darken-3">INICIAR SESIÓN</a>
+			</div>
+
+			<div class="col s12">
+				<div class="section">
+					<a href="" class="white-text">¿Olvidaste tu contraseña?</a>
+				</div>				
+			</div>
+
+			<footer class="white-text center-align pad20">
+				¿NO TIENES CUENTA? <a href="" class="amber-text text-accent-4">REGÍSTRATE</a>
+			</footer>
+		</div>
+
+
 	</div>
-	<div class="info">
-		<input type="email" class="email" placeholder="Correo electronico" >
-		<input type="password" class="email" placeholder="Correo electronico" >
-		<button class="signup">INICIAR SESIÓN</button>	
-	</div>
-	<div class="olvido">
-		<p>
-			¿Olvidaste tu contraseña?
-		</p>		
-	</div>
-	<footer>
-		¿NO TIENES CUENTA? <a href="">REGÍSTRATE</a>
-	</footer>
 
-
-
-
-
-
-
-
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+	<script src="assets/js/main.js"></script>
 </body>
+
 </html>
