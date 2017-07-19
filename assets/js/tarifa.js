@@ -1,6 +1,3 @@
-if (!localStorage.getItem('cards')) {
-    localStorage.setItem('cards', "[]");
-}
 var tarifa = 0;
 
 $(document).ready(function () {
@@ -29,6 +26,8 @@ function calcularTarifa() {
 
         console.log(url);
 
+        //con ajax daba error y en stackoverflow consegui este codigo que funcionaba
+
         var jqxhr = $.getJSON(url)
             .done(function (result) {
                 console.log(result);
@@ -46,6 +45,7 @@ function calcularTarifa() {
 }
 
 function mostrarTarifa(saldo) {
+    //usando expresiones regulares y replace
     var pesos = parseInt(saldo.saldoTarjeta.replace(/\$/g, '').replace(/\./g, ''))
     console.log(pesos);
 

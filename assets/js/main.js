@@ -1,7 +1,3 @@
-if (!localStorage.getItem('cards')) {
-    localStorage.setItem('cards', "[]");
-}
-
 function login(){
     var mail = $('#mail');
     var pass = $('#pass');

@@ -1,6 +1,3 @@
-if (!localStorage.getItem('cards')) {
-    localStorage.setItem('cards', "[]");
-}
 $(document).ready(function () {
     var cards = JSON.parse(localStorage.getItem('cards'));
     cards.forEach((card) => {
@@ -24,6 +21,8 @@ function verSaldo() {
         var url = `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${bip}`;
 
         console.log(url);
+
+        //con ajax daba error y en stackoverflow consegui este codigo que funcionaba
 
         var jqxhr = $.getJSON(url)
             .done(function (result) {

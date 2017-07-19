@@ -1,7 +1,3 @@
-if (!localStorage.getItem('cards')) {
-    localStorage.setItem('cards', "[]");
-}
-
 function addCard(){
     var card_number_txt = $('#card_number_txt')
     if(card_number_txt.hasClass('valid')) {
@@ -9,7 +5,7 @@ function addCard(){
         var cards;
         cards = JSON.parse(localStorage.getItem('cards'));
         cards.push(card);
-        cards = [...new Set(cards)];
+        cards = Array.from(new Set(cards)); //quitar duplicados (developer.mozilla.org array desde un set)
         localStorage.setItem('cards', JSON.stringify(cards));
         refreshCards();
     }    
